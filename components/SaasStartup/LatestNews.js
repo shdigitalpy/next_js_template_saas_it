@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Moment from 'react-moment';
+import 'moment-timezone';
 
 const LatestNews = ({ posts }) => {
     return (
@@ -13,13 +15,14 @@ const LatestNews = ({ posts }) => {
 				<div className="row">
 					
 
-				<div className="col-lg-4">
+					{posts.map(({ title, slug, date, author, featuredImage }) => (
+				<div className="col-lg-4 col-md-6" key={title}>
 
 						
-					<div className="single-blog-post">
-						{posts.map(({ title, slug, date, author, featuredImage }) => (
+					
+						
 
-						<div key={title} >
+						<div className="single-blog-post" >
 							
 
 							<div className="blog-img">
@@ -42,13 +45,13 @@ const LatestNews = ({ posts }) => {
 								<ul className="admin-content">
 									<li>
 
-										<img src="" alt="Image" />
+										<img src="/images/saas/saas-user1.jpg" alt="Image" />
 										
 											<a href="#" className="admin">{author.node.firstName} {author.node.lastName}</a>
 										
 									</li>
 									<li className="date">
-										<span> {date}</span>
+										<Moment element="span" format="LL" locale="de-ch">{date}</Moment>
 									</li>
 								</ul>
 								
@@ -59,11 +62,13 @@ const LatestNews = ({ posts }) => {
 							
 						</div>
 
-							))}
-
 						</div>
 
-					</div>
+							))}
+
+					
+
+					
 				</div>
 			</div>
 		</div>

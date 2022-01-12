@@ -11,7 +11,9 @@ const LatestNews = () => {
 				</div>
 				
 				<div className="row">
+				
 					<div className="col-lg-4 col-md-6">
+						
 						<div className="single-blog-post">
 							<div className="blog-img">
 								<a href="/blog-details" target="_blank">

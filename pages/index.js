@@ -11,6 +11,7 @@ import FunFacts from '../components/SaasStartup/FunFacts';
 import LatestNews from '../components/SaasStartup/LatestNews';
 import ContactUs from '../components/SaasStartup/ContactUs';
 import FooterSaasStartup from '../components/_App/FooterSaasStartup';
+import 'moment/locale/de-ch';
 
 import {
   ApolloClient,
